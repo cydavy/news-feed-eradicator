@@ -276,3 +276,13 @@ html:not([data-nfe-enabled='false']) #primary > #nfe-container {
 	opacity: 0 !important;
 	pointer-events: none !important;
 }
+
+/* Tiktok: Firefox */
+html:not([data-nfe-enabled='false']) div[class*='DivMainContainer'] > :not(#nfe-container) {
+	display: none;
+}
+
+/* Tiktok: Chrome */
+html:not([data-nfe-enabled='false']) .tt-feed {
+	display: none;
+}

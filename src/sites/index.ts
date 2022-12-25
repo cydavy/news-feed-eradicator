@@ -9,7 +9,8 @@ export type SiteId =
 	| 'linkedin'
 	| 'youtube'
 	| 'instagram'
-	| 'github';
+	| 'github'
+	| 'tiktok';
 
 export const Sites: Record<SiteId, Site> = {
 	facebook: {
@@ -88,6 +89,52 @@ export const Sites: Record<SiteId, Site> = {
 		paths: ['/'],
 		origins: ['https://github.com/*'],
 	},
+	tiktok: {
+		label: 'TikTok',
+		domain: 'tiktok.com',
+		paths: ['/',
+				'/following', 
+				'/foryou',
+				'/ar',
+				'/bn-IN',
+				'/ceb-PH',
+				'/cs-CZ',
+				'/de-DE',
+				'/el-GR',
+				'/en',
+				'/es',
+				'/fi-FI',
+				'/fil-PH',
+				'/fr',
+				'/he-IL',
+				'/hi-IN',
+				'/hu-HU',
+				'/id-ID',
+				'/it-IT',
+				'/ja-JP',
+				'/jv-ID',
+				'/km-KH',
+				'/ko-KR',
+				'/ms-MY',
+				'/my-MM',
+				'/nl-NL',
+				'/pl-PL',
+				'/pt-BR',
+				'/ro-RO',
+				'/ru-RU',
+				'/sv-SE',
+				'/th-TH',
+				'/tr-TR',
+				'/uk-UA',
+				'/ur',
+				'/vi-VN',
+				'/zh-Hant-TW',
+		],
+		origins: [
+			'http://www.tiktok.com/*',
+			'https://www.tiktok.com/*',
+		],
+	}
 };
 
 export type Site = {
