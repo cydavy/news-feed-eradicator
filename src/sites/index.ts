@@ -10,7 +10,9 @@ export type SiteId =
 	| 'youtube'
 	| 'instagram'
 	| 'github'
-	| 'tiktok';
+	| 'tiktok'
+	| 'slickdeals'
+	;
 
 export const Sites: Record<SiteId, Site> = {
 	facebook: {
@@ -88,6 +90,17 @@ export const Sites: Record<SiteId, Site> = {
 		domain: 'github.com',
 		paths: ['/'],
 		origins: ['https://github.com/*'],
+	},
+	slickdeals: {
+		label: 'Slickdeals',
+		domain: 'slickdeals.net',
+		paths: ['/'],
+		origins: [
+			'https://slickdeals.net/*',
+			'http://slickdeals.net/*',
+			'http://www.slickdeals.net/*',
+			'https://www.slickdeals.net/*',
+		],
 	},
 	tiktok: {
 		label: 'TikTok',

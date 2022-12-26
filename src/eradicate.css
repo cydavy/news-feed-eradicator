@@ -282,6 +282,11 @@ html:not([data-nfe-enabled='false']) div[class*='DivMainContainer'] > :not(#nfe-
 	display: none;
 }
 
+/* Slick Deals */
+html:not([data-nfe-enabled='false']) div[class*='fpMainContent'] > :not(#nfe-container) {
+	display: none;
+}
+
 /* Tiktok: Chrome */
 html:not([data-nfe-enabled='false']) .tt-feed {
 	display: none;
