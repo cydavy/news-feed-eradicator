@@ -1,5 +1,6 @@
 import instagramCss from './instagram.str.css';
 import twitterCss from './twitter.str.css';
+import githubCss from './github.str.css';
 
 export type SiteId =
 	| 'facebook'
@@ -41,10 +42,15 @@ export const Sites: Record<SiteId, Site> = {
 		css: instagramCss,
 	},
 	twitter: {
-		label: 'Twitter',
-		domain: 'twitter.com',
+		label: 'Twitter/X',
+		domain: 'x.com',
 		paths: ['/home', '/compose/tweet'],
-		origins: ['http://twitter.com/*', 'https://twitter.com/*'],
+		origins: [
+			'http://twitter.com/*',
+			'https://twitter.com/*',
+			'http://x.com/*',
+			'https://x.com/*',
+		],
 		css: twitterCss,
 	},
 	youtube: {
@@ -88,8 +94,9 @@ export const Sites: Record<SiteId, Site> = {
 	github: {
 		label: 'Github',
 		domain: 'github.com',
-		paths: ['/'],
+		paths: ['/', '/dashboard'],
 		origins: ['https://github.com/*'],
+		css: githubCss,
 	},
 	slickdeals: {
 		label: 'Slickdeals',
